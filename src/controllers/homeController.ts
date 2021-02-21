@@ -35,10 +35,6 @@ export let GetDataFromCSV = (req: Request,res: Response,next: NextFunction) => {
             next();
           }
         } catch (error) {
-          res.status(501).json({
-            status: false,
-            message: error,
-          });
           next(error);
         }
     });

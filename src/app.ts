@@ -13,12 +13,8 @@ const port = process.env.APP_PORT;
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-  res.send("The sedulous hyena ate the antelope!");
+  res.send("Empty request");
 });
-
-app.post('/', (request, response) => {
-    response.send(request.body);
-  });
 
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${port}`);

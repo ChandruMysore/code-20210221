@@ -34,10 +34,7 @@ const app = express_1.default();
 const port = process.env.APP_PORT;
 app.use(bodyParser.json());
 app.get("/", (req, res) => {
-    res.send("The sedulous hyena ate the antelope!");
-});
-app.post('/', (request, response) => {
-    response.send(request.body);
+    res.send("Empty get request");
 });
 app.listen(port, () => {
     console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
